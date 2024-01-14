@@ -58,7 +58,7 @@ function App() {
   return (
     <>
       <FoodContext.Provider value={{ cart, cartAddition, handleDeleteProduct }}>
-      <BrowserRouter basename='/Task-one'>
+      <BrowserRouter basename='/itsfood'>
 
           <NavHeader />
           <Routes>
