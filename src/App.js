@@ -10,6 +10,7 @@ import CheckoutView from './Views/CheckoutView';
 import Footer from './Components/Footer';
 import PlacedAlert from './Components/PlacedAlert';
 import LazyLoadLogo from './Components/LazyLoadLogo';
+const LazyAboutPage = React.lazy(() => import('./Views/AboutUs'));
 const LazyProductPage = React.lazy(() => import('./Views/ProductsPage'));
 
 export const FoodContext = createContext();
@@ -58,8 +59,7 @@ function App() {
   return (
     <>
       <FoodContext.Provider value={{ cart, cartAddition, handleDeleteProduct }}>
-      <BrowserRouter basename='/itsfood'>
-
+        <BrowserRouter basename="/itsfood">
           <NavHeader />
           <Routes>
             <Route
@@ -90,6 +90,14 @@ function App() {
 
             <Route path="/Payment" element={<CheckoutView />} />
             <Route path="/OrderPlaced" element={<PlacedAlert />} />
+            <Route
+              path="/AboutUs"
+              element={
+                <React.Suspense fallback={<LazyLoadLogo />}>
+                  <LazyAboutPage />
+                </React.Suspense>
+              }
+            />
             {/* <Route path="/lazyloadlogo" element={<LazyLoadLogo />} /> */}
           </Routes>
           <Footer />

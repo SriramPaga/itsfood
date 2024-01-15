@@ -79,7 +79,7 @@ function CartView(props) {
     </div>
   );
   return (
-    <div class="h-full bg-gray-100 pt-20">
+    <div class="h-full bg-gray-100 pt-20 pb-20">
       {cart.length > 0 ? fullCart : EmptyCart}
     </div>
   );

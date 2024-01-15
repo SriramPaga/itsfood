@@ -48,7 +48,8 @@ function Footer() {
             </a>
             <a
               rel="noopener noreferrer"
-              href="#"
+              target="blank"
+              href="https://github.com/SriramPaga/itsfood"
               title="GitHub"
               class="flex items-center justify-center w-8 h-8  rounded-full bg-red-500 hover:bg-red-600 duration-150 text-white"
             >
