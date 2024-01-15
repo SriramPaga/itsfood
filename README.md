@@ -1,5 +1,6 @@
 # itsfood
-Heat It Eat It
+Heat It Eat It!
+
 Satisfy your cravings with a seamless food ordering experience!
 
 # Live Demo
